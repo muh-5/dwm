@@ -9,16 +9,36 @@ static const char *fonts[]          = { "monospace:size=10", "fontawesome:size=1
 static const char dmenufont[]       = "monospace:size=10";
 
 /* background color */
-static const char col_gray1[]       = "#000000";
+static const char col_gray1[]		= "#000000";
 /* inactive border color */
-static const char col_gray2[]       = "#000000";
+static const char col_gray2[]		= "#000000";
 /* font color */
-static const char col_gray3[]       = "#ffffff";
+static const char col_gray3[]		= "#ffffff";
 /* current tag and current window font color */
-static const char col_gray4[]       = "#ffffff";
+static const char col_gray4[]		= "#618685";
 /* top bar second color (blue) and active window border color */
-static const char col_cyan[]        = "#618685";
+static const char col_cyan[]		= "#618685";
 
+/* Statusbar right text */
+static const char sb_rt[]	= "#ffffff";
+/* Statusbar right background */
+static const char sb_rb[]	= "#618685";
+/* Tagbar left selected text */
+static const char tb_lst[]	= "#ffffff";
+/* Tagbar left selected background */
+static const char tb_lsb[]	= "#618685";
+/* Tagbar left unselected text */
+static const char tb_lust[]	= "#ffffff";
+/* Tagbar left unselected background */
+static const char tb_lusb[]	= "#000000";
+/* infobar middle  selected text */
+static const char ib_mst[]	= "#ffffff";
+/* infobar middle  selected background */
+static const char ib_msb[]	= "#000000";
+/* infobar middle  unselected text */
+static const char ib_must[]	= "#618685";
+/* infobar middle  unselected background */
+static const char ib_musb[]	= "#000000";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -26,15 +46,15 @@ static const char *colors[][3]      = {
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 
 	/* Statusbar right {text,background,not used but cannot be empty} */
-	[SchemeStatus]  = { col_gray3, col_gray1,  "#000000"  },
+	[SchemeStatus]  = { sb_rt, sb_rb,  "#000000"  },
 	/* Tagbar left selected {text,background,not used but cannot be empty} */
-	[SchemeTagsSel]  = { col_gray4, col_cyan,  "#000000"  },
+	[SchemeTagsSel]  = { tb_lst, tb_lsb,  "#000000"  },
 	/* Tagbar left unselected {text,background,not used but cannot be empty} */
-	[SchemeTagsNorm]  = { col_gray3, col_gray1,  "#000000"  },
+	[SchemeTagsNorm]  = { tb_lust, tb_lusb,  "#000000"  },
 	/* infobar middle  selected {text,background,not used but cannot be empty} */
-	[SchemeInfoSel]  = { col_gray4, col_cyan,  "#000000"  },
+	[SchemeInfoSel]  = { ib_mst, ib_msb,  "#000000"  },
 	/* infobar middle  unselected {text,background,not used but cannot be empty} */
-	[SchemeInfoNorm]  = { col_gray3, col_gray1,  "#000000"  }, 
+	[SchemeInfoNorm]  = { ib_must, ib_musb,  "#000000"  }, 
 };
 
 /* tagging */
