@@ -70,7 +70,8 @@ static const Rule rules[] = {
 	{ "Gimp",		NULL,		NULL,	0,		0,		-1 },
 	{ "Telegram",		NULL,		NULL,	1 << 8,		0,		-1 },
 	{ "Firefox", 		NULL, 		NULL, 	1, 		0, 		-1 },
-	{ "Tor Browser", 	NULL, 		NULL, 	2, 		0, 		-1 }
+	{ "Tor Browser", 	NULL, 		NULL, 	2, 		0, 		-1 },
+	{ "XVkbd",		NULL, 		NULL, 	0, 		1, 		-1 }
 };
 
 /* layout(s) */
@@ -138,11 +139,12 @@ static const char *print_active_window[] = { "/bin/sh", "-c", "maim --format=png
  * static const char *brightness_inc[]	= {  "xbacklight", "-inc", "10", NULL };
  * static const char *brightness_dec[]	= { "xbacklight", "-dec", "10", NULL };
  */ 
- static const char *volume_inc[]		= { "amixer", "-q", "sset", "Master", "2dB+", NULL };
+static const char *volume_inc[]		= { "amixer", "-q", "sset", "Master", "2dB+", NULL };
+static const char *volume_dec[]		= { "amixer", "-q", "sset", "Master", "2dB-", NULL };
+static const char *volume_mute[]	= { "amixer", "-q", "sset", "Master", "toggle", NULL };
 
- static const char *volume_dec[]		= { "amixer", "-q", "sset", "Master", "2dB-", NULL };
+static const char *xvkbd[]	= { "xvkbd", NULL };
 
- static const char *volume_mute[]	= { "amixer", "-q", "sset", "Master", "toggle", NULL };
 /* static const char *gimpcmd[]		= { "gimp", NULL };
  * static const char *grapcolor[]		= { "/bin/sh", "-c", "grabc | xclip -selection clipboard", NULL };
  * static const char *vscode[]		= { "code-oss", NULL };
@@ -217,9 +219,10 @@ static Key keys[] = {
 static Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
-	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[0]} },
+	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[1]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
+	{ ClkStatusText,        0,              Button3,        spawn,          {.v = xvkbd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
