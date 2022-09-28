@@ -18,28 +18,28 @@ static const char col_gray3[]		= "#ffffff";
 /* current tag and current window font color */
 static const char col_gray4[]		= "#618685";
 /* top bar second color (blue) and active window border color */
-static const char col_cyan[]		= "#618685";
+static const char col_cyan[]		= "#0e1420";
 
 /* Statusbar right text */
 static const char sb_rt[]	= "#ffffff";
 /* Statusbar right background */
-static const char sb_rb[]	= "#618685";
+static const char sb_rb[]	= "#0e1420";
 /* Tagbar left selected text */
-static const char tb_lst[]	= "#ffffff";
+static const char tb_lst[]	= "#00ffff";
 /* Tagbar left selected background */
-static const char tb_lsb[]	= "#618685";
+static const char tb_lsb[]	= "#0e1420";
 /* Tagbar left unselected text */
 static const char tb_lust[]	= "#ffffff";
 /* Tagbar left unselected background */
-static const char tb_lusb[]	= "#000000";
+static const char tb_lusb[]	= "#0e1420";
 /* infobar middle  selected text */
 static const char ib_mst[]	= "#ffffff";
 /* infobar middle  selected background */
-static const char ib_msb[]	= "#000000";
+static const char ib_msb[]	= "#0e1420";
 /* infobar middle  unselected text */
-static const char ib_must[]	= "#618685";
+static const char ib_must[]	= "#ffffff";
 /* infobar middle  unselected background */
-static const char ib_musb[]	= "#000000";
+static const char ib_musb[]	= "#0e1420";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
