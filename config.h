@@ -144,7 +144,7 @@ static const char *volume_dec[]		= { "amixer", "-q", "sset", "Master", "2dB-", N
 static const char *volume_mute[]	= { "amixer", "-q", "sset", "Master", "toggle", NULL };
 
 static const char *xvkbd[]	= { "xvkbd", NULL };
-
+static const char *date_notfi[]	= { "/bin/sh","-c","herbe \"$(date)\"", NULL };
 /* static const char *gimpcmd[]		= { "gimp", NULL };
  * static const char *grapcolor[]		= { "/bin/sh", "-c", "grabc | xclip -selection clipboard", NULL };
  * static const char *vscode[]		= { "code-oss", NULL };
@@ -223,6 +223,7 @@ static Button buttons[] = {
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkStatusText,        0,              Button3,        spawn,          {.v = xvkbd } },
+	{ ClkStatusText,        0,              Button1,        spawn,          {.v = date_notfi } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
