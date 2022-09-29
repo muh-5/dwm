@@ -143,7 +143,8 @@ static const char *volume_inc[]		= { "amixer", "-q", "sset", "Master", "2dB+", N
 static const char *volume_dec[]		= { "amixer", "-q", "sset", "Master", "2dB-", NULL };
 static const char *volume_mute[]	= { "amixer", "-q", "sset", "Master", "toggle", NULL };
 
-static const char *xvkbd[]	= { "xvkbd", NULL };
+static const char *xvkbd[]	= { "/bin/sh","-c"," pkill xvkbd || xvkbd &\
+	play /home/muhammed/.local/custom/notification_sound", NULL };
 //static const char *date_notfi[]	= { "/bin/sh","-c","pkill herbe || herbe \"$(date)\"", NULL };
 static const char *date_notfi[]	= { "/bin/sh","-c","pkill herbe || herbe \"$(date)\" &\ 
 	play /home/muhammed/.local/custom/notification_sound", NULL };
