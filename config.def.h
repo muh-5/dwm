@@ -146,7 +146,7 @@ static const char *volume_mute[]	= { "amixer", "-q", "sset", "Master", "toggle",
 static const char *xvkbd[]	= { "/bin/sh","-c"," pkill xvkbd || xvkbd &\
 	play /home/muhammed/.local/custom/notification_sound", NULL };
 //static const char *date_notfi[]	= { "/bin/sh","-c","pkill herbe || herbe \"$(date)\"", NULL };
-static const char *date_notfi[]	= { "/bin/sh","-c","pkill herbe || herbe \"$(date)\" &\ 
+static const char *date_notfi[]	= { "/bin/sh","-c","pkill herbe || herbe \"$(date)\" &\
 	play /home/muhammed/.local/custom/notification_sound", NULL };
 /* static const char *gimpcmd[]		= { "gimp", NULL };
  * static const char *grapcolor[]		= { "/bin/sh", "-c", "grabc | xclip -selection clipboard", NULL };
