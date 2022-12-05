@@ -5,6 +5,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
+#define ICONSIZE 16   /* icon size */
+#define ICONSPACING 5 /* space between icon and title */
 static const char *fonts[]          = { "Hack Bold Nerd Font Complete Mono:size=10"};
 //static const char *fonts[]          = { "monospace:size=10", "fontawesome:size=15" };
 static const char dmenufont[]       = "Hack Bold Nerd Font Complete Mono:size=10";
@@ -40,6 +42,7 @@ static const char ib_msb[]	= "#0e1420";
 static const char ib_must[]	= "#ffffff";
 /* infobar middle  unselected background */
 static const char ib_musb[]	= "#0e1420";
+
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
