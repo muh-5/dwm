@@ -184,7 +184,7 @@ static const Key keys[] = {
 	{ 0,			        0x1008ff12,spawn,          {.v = volume_mute } },
 	{ 0,			        XK_Print,  spawn,          {.v = print_select_window } },
 	{ ShiftMask,		        XK_Print,  spawn,          {.v = print_screen } },
-	{ MODKEY,		        XK_Print,  spawn,          {.v = print_active_window } },
+	{ ControlMask,		        XK_Print,  spawn,          {.v = print_active_window } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
